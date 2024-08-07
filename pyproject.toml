@@ -8,9 +8,9 @@ license = "Apache 2.0"
 [tool.poetry.dependencies]
 python = "<3.9,>=3.8.0"
 requests = "^2.32.0"
-singer-sdk = "^0.39.0"
+singer-sdk = "^0.32.0"
 simpleeval = "^0.9.13"
-python-dateutil = "2.8.2"
+python-dateutil = "^2.9.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"

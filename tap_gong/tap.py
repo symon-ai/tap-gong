@@ -26,14 +26,14 @@ class TapGong(Tap):
     """Gong tap class."""
     name = "tap-gong"
 
-    def __init__(self, config, state, catalog, parse_env_config, validate_config):
-        super().__init__(config=config, state=state, catalog=catalog, parse_env_config=parse_env_config,
-                         validate_config=validate_config)
-        """ This is an extended validation to validate start_date and end_date provided through config file. Meltano
-            SDK currently doesn't have a way to compare or validate values in config file parameters other than 
-            validating data type and optional or required filed. This solution was suggested by a Meltano expert.
-        """
-        config_helper.extended_config_validation(self.config)
+    # def __init__(self, config, state, catalog, parse_env_config, validate_config):
+    #     super().__init__(config=config, state=state, catalog=catalog, parse_env_config=parse_env_config,
+    #                      validate_config=validate_config)
+    #     """ This is an extended validation to validate start_date and end_date provided through config file. Meltano
+    #         SDK currently doesn't have a way to compare or validate values in config file parameters other than
+    #         validating data type and optional or required filed. This solution was suggested by a Meltano expert.
+    #     """
+    #     config_helper.extended_config_validation(self.config)
 
     config_jsonschema = th.PropertiesList(
         th.Property("access_key", th.StringType, required=True),
@@ -43,6 +43,7 @@ class TapGong(Tap):
     ).to_dict()
 
     def discover_streams(self) -> List[Stream]:
+        config_helper.extended_config_validation(self.config)
         """Return a list of discovered streams."""
         return [stream_class(tap=self) for stream_class in STREAM_TYPES]
 
