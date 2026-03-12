@@ -1,0 +1,49 @@
+name: Veracode Cursor Agent Fix
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Veracode Static Scan"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  trigger-cursor-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+
+      - name: Checkout tap-target-utils repository
+        uses: actions/checkout@v4
+        with:
+          repository: symon-ai/tap-target-utils
+          path: tap-target-utils
+          token: ${{ secrets.TAP_TARGET_UTILS_PAT }}
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Set environment variables
+        run: |
+          echo "REPO_NAME=${{ github.repository }}" >> $GITHUB_ENV
+          echo "DEFAULT_BRANCH=${{ github.event.repository.default_branch }}" >> $GITHUB_ENV
+
+      - name: Create Cursor Background Agent
+        id: create-cursor-agent
+        env:
+          VERACODE_API_ID: ${{ secrets.VERACODE_API_KEY_ID }}
+          VERACODE_API_KEY: ${{ secrets.VERACODE_API_KEY_SECRET }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: |
+          python tap-target-utils/cursor_agent.py
