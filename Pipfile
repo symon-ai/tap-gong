@@ -25,7 +25,7 @@ python-dateutil = {version = "==2.9.0.post0", markers = "python_full_version >= 
 python-dotenv = {version = "==1.2.1", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
 pyyaml = {version = "==6.0.3", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
 referencing = {version = "==0.37.0", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
-requests = {version = "==2.32.5", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
+requests = {version = "==2.33.0", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
 rpds-py = {version = "==0.30.0", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
 simpleeval = {version = "==1.0.3", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}
 simplejson = {version = "==3.20.2", markers = "python_full_version >= \"3.13.0\" and python_full_version < \"4.0.0\""}

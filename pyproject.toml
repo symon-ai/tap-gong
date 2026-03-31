@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "tap-gong"
-version = "2.0.0"
+version = "2.1.0"
 description = "`tap-gong` is a Singer tap for Gong, built with the Meltano SDK for Singer Taps."
 authors = ["Stephen Bailey"]
 license = "Apache 2.0"
 
 [tool.poetry.dependencies]
 python = "^3.13.0"
-requests = "^2.32.0"
+requests = "^2.33.0"
 singer-sdk = "^0.53.0"
 python-dateutil = "^2.9.0"
 
