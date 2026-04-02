@@ -45,5 +45,6 @@ jobs:
           VERACODE_API_ID: ${{ secrets.VERACODE_API_KEY_ID }}
           VERACODE_API_KEY: ${{ secrets.VERACODE_API_KEY_SECRET }}
           CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
         run: |
           python tap-target-utils/cursor_agent.py
