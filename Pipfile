@@ -31,9 +31,9 @@ pyyaml = {version = "==6.0.3", markers = "python_version >= \"3.13\" and python_
 referencing = {version = "==0.37.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 requests = {version = "==2.33.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 rpds-py = {version = "==0.30.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
-simpleeval = {version = "==1.0.3", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
+simpleeval = {version = "==1.0.7", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 simplejson = {version = "==3.20.2", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
-singer-sdk = {version = "==0.53.5", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
+singer-sdk = {version = "==0.53.7", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 six = {version = "==1.17.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 sqlalchemy = {version = "==2.0.46", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 typing-extensions = {version = "==4.15.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
