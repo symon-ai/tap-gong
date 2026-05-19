@@ -38,7 +38,7 @@ six = {version = "==1.17.0", markers = "python_version >= \"3.13\" and python_fu
 sqlalchemy = {version = "==2.0.46", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 typing-extensions = {version = "==4.15.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 universal-pathlib = {version = "==0.3.8", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
-urllib3 = {version = "==2.6.3", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
+urllib3 = {version = ">=2.7.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 
 [dev-packages]
 
