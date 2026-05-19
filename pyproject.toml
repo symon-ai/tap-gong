@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-gong"
-version = "2.3.2"
+version = "2.4.0"
 description = "`tap-gong` is a Singer tap for Gong, built with the Meltano SDK for Singer Taps."
 authors = ["Stephen Bailey"]
 license = "Apache 2.0"
