@@ -213,7 +213,26 @@ class CallsStream(GongStream):
                 ),
             ),
         ),
-        # th.Property("collaboration", th.ObjectType()),
+        th.Property(
+            "collaboration",
+            th.ObjectType(
+                th.Property(
+                    "publicComments",
+                    th.ArrayType(
+                        th.ObjectType(
+                            th.Property("id", th.StringType),
+                            th.Property("audioStartTime", th.NumberType),
+                            th.Property("audioEndTime", th.NumberType),
+                            th.Property("commenterUserId", th.StringType),
+                            th.Property("comment", th.StringType),
+                            th.Property("posted", th.DateTimeType),
+                            th.Property("inReplyTo", th.StringType),
+                            th.Property("duringCall", th.BooleanType),
+                        )
+                    ),
+                ),
+            ),
+        ),
     ).to_dict()
 
     def post_process(self, row: dict, context: Optional[dict]) -> dict:
