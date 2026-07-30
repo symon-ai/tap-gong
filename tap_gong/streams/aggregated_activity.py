@@ -35,7 +35,7 @@ class AggregatedActivityStream(GongStream):
     path = "/v2/stats/activity/aggregate"
     primary_keys = ["userId"]
     records_jsonpath = "$.usersAggregateActivityStats[*]"
-    rest_method = "POST"
+    http_method = "POST"
     next_page_token_jsonpath = "$.records.cursor"
     #parent_stream_type = UsersStream
     #ignore_parent_replication_key = False

@@ -11,7 +11,7 @@ class CallsStream(GongStream):
     primary_keys = ["id"]
     records_jsonpath = "$.calls[*]"
     next_page_token_jsonpath = "$.records.cursor"
-    rest_method = "POST"
+    http_method = "POST"
 
     schema = th.PropertiesList(
         th.Property("id", th.StringType),
@@ -290,8 +290,8 @@ class CallsStream(GongStream):
         return request_body
 
     def get_records(self, context: Optional[dict]):
-        "Overwrite default method to return both the record and child context."
         for row in self.request_records(context):
-            row = self.post_process(row, context)
-            child_context = {"call_id": row["id"]}
-            yield (row, child_context)
+            yield self.post_process(row, context)
+
+    def get_child_context(self, record: dict, context: Optional[dict]) -> dict:
+        return {"call_id": record["id"]}

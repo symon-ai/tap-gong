@@ -24,7 +24,7 @@ class InteractionStatsStream(GongStream):
     path = "/v2/stats/interaction"
     primary_keys = ["userId"]
     records_jsonpath = "$.peopleInteractionStats[*]"
-    rest_method = "POST"
+    http_method = "POST"
     next_page_token_jsonpath = "$.records.cursor"
     state_partitioning_keys = []
 

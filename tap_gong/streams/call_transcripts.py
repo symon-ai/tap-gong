@@ -11,7 +11,7 @@ class CallTranscriptsStream(GongStream):
     name = "call_transcripts"
     path = "/v2/calls/transcript"
     primary_keys = ["callId"]
-    rest_method = "POST"
+    http_method = "POST"
     records_jsonpath = "$.callTranscripts[*]"
     parent_stream_type = CallsStream 
     ignore_parent_replication_key = False
