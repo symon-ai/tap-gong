@@ -151,3 +151,6 @@ dmypy.json
 /.idea/tap-gong.iml
 /users-20221014T135236.jsonl
 /.idea/vcs.xml
+
+.DS_Store
+requirements.txt
