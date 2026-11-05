@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 attrs = {version = "==25.4.0", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
-certifi = {version = "==2026.1.4", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
+certifi = {version = "==2026.10.23", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 charset-normalizer = {version = "==3.4.4", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 click = {version = "==8.3.3", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\""}
 colorama = {version = "==0.4.6", markers = "python_version >= \"3.13\" and python_full_version < \"4.0.0\" and (platform_system == \"Windows\" or sys_platform == \"win32\")"}
